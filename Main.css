@@ -1,0 +1,1334 @@
+/* Reset e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+body {
+    background-image: url('/images/texturas-de-fundo-de-papel-branco_1036998-289261.avif');
+    background-repeat: repeat;
+    background-size: auto; /* Ou 'cover', se preferir */
+    margin: 0;
+    padding: 0;
+    background-color: transparent; /* Assegura que não há cor de fundo sólida */
+}
+
+
+#header {
+    position: relative; /* Mudando de fixed para relative */
+    top: auto; /* Removendo posicionamento top */
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Garantir que o conteúdo principal comece normalmente */
+  main, #inicio, .hero-section {
+    margin-top: 0; /* Remove qualquer margem compensatória */
+    padding-top: 0; /* Remove qualquer padding compensatório */
+  }
+  
+  /* Resto dos estilos permanece igual */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .company-logo {
+    max-height: 60px;
+    width: auto;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  @media (max-width: 768px) {
+    #header {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .logo {
+      margin-bottom: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+
+  #header {
+    position: relative !important;
+    top: auto !important;
+  }
+
+/* Header e Navegação */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-family: 'Righteous', cursive;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sua-imagem-de-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button.primary {
+    background: #3498db;
+    color: white;
+}
+
+.cta-button.primary:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Stats Banner */
+.stats-banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 4rem 5%;
+    background: #f8f9fa;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Serviços */
+.services-section {
+    padding: 5rem 5%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Processo Timeline */
+.processo-timeline {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5%;
+    position: relative;
+}
+
+.processo-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #3498db;
+    z-index: -1;
+}
+
+.processo-item {
+    text-align: center;
+    flex: 1;
+}
+
+/* Portfolio */
+.portfolio-section {
+    padding: 5rem 5%;
+    background: #f8f9fa;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Contato */
+.contact-section {
+    padding: 5rem 5%;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 4rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 3rem;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-banner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .processo-timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .processo-timeline::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
+/* Estilos para a seção de Depoimentos */
+.testimonials-section {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito hover no cartão */
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 25px rgba(52, 152, 219, 0.2);
+}
+
+/* Efeito de borda gradiente no hover */
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover::before {
+    transform: scaleX(1);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Estilo das aspas */
+.testimonial-content::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 4rem;
+    color: #3498db;
+    opacity: 0.2;
+    font-family: Georgia, serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    position: relative; /* Adicionado para controlar o overflow da imagem */
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    transition: all 0.5s ease; /* Aumentado o tempo da transição */
+    transform-origin: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Novo efeito de zoom na imagem */
+.testimonial-author:hover .author-image {
+    transform: scale(1.5);
+    border-color: #3498db;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    z-index: 2;
+}
+
+/* Adicionando um overlay suave durante o hover */
+.testimonial-author::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.testimonial-author:hover::after {
+    opacity: 1;
+}
+
+.author-info {
+    transition: transform 0.3s ease;
+}
+
+.author-info h4 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Nome do autor com underline no hover */
+.testimonial-author:hover .author-info h4 {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Cargo/tipo do cliente com efeito fade */
+.author-info p {
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-author:hover .author-info p {
+    opacity: 1;
+}
+
+/* Efeito de fade in ao carregar os depoimentos */
+@keyframes testimonialFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card {
+    animation: testimonialFadeIn 0.5s ease forwards;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+/* Estilos para a seção FAQ */
+.faq-section {
+    padding: 5rem 5%;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 0 1rem 1rem;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Estilos para a seção Sobre */
+.about-section {
+    padding: 5rem 5%;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-features ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.about-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-features i {
+    color: #3498db;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Estilos para o formulário de contato */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.submit-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #2980b9;
+}
+
+/* Estilos para as certificações */
+.certifications {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.certification-item {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+}
+
+.certification-item i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Melhorias na responsividade */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Efeitos de hover adicionais */
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Estilos para o slider de imagens */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-controls button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.3);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.prev-slide {
+    left: 20px;
+}
+
+.next-slide {
+    right: 20px;
+}
+
+.slider-controls button:hover {
+    background: rgba(255,255,255,0.5);
+}
+/* Header e Navegação */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-family: 'Righteous', cursive;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.logo i {
+    color: #3498db;
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a i {
+    font-size: 1.2rem;
+}
+
+.nav-links li a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+/* Header e Navegação */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-family: 'Righteous', cursive;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Adicionando ícones com ::before */
+.nav-links li a::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+/* Ícones específicos para cada link */
+.nav-links li a[href="#inicio"]::before {
+    content: "\f015"; /* ícone de casa */
+}
+
+.nav-links li a[href="#servicos"]::before {
+    content: "\f1fc"; /* ícone de pincel */
+}
+
+.nav-links li a[href="#portfolio"]::before {
+    content: "\f87c"; /* ícone de galeria */
+}
+
+.nav-links li a[href="#processo"]::before {
+    content: "\f0ae"; /* ícone de lista de tarefas */
+}
+
+.nav-links li a[href="#sobre"]::before {
+    content: "\f007"; /* ícone de usuário */
+}
+
+.nav-links li a[href="#depoimentos"]::before {
+    content: "\f005"; /* ícone de estrela */
+}
+
+.nav-links li a[href="#contato"]::before {
+    content: "\f095"; /* ícone de telefone */
+}
+
+.nav-links li a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+}
+/* Estilos para a seção de Diferenciais */
+.diferenciais-section {
+    padding: 5rem 5%;
+    background: #f9f9f9;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.diferencial-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Efeito hover no cartão */
+.diferencial-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 5px 25px rgba(52, 152, 219, 0.2);
+}
+
+/* Efeito de borda gradiente no hover */
+.diferencial-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.diferencial-item:hover::before {
+    transform: scaleX(1);
+}
+
+/* Estilização dos títulos */
+.diferencial-item h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+/* Ícones antes dos títulos */
+.diferencial-item h3::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #3498db;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Ícones específicos para cada diferencial */
+.diferencial-item:nth-child(1) h3::before {
+    content: "\f058"; /* ícone de check-circle */
+}
+
+.diferencial-item:nth-child(2) h3::before {
+    content: "\f017"; /* ícone de clock */
+}
+
+.diferencial-item:nth-child(3) h3::before {
+    content: "\f501"; /* ícone de user-graduate */
+}
+
+.diferencial-item:nth-child(4) h3::before {
+    content: "\f155"; /* ícone de dollar-sign */
+}
+
+/* Efeito hover nos ícones */
+.diferencial-item:hover h3::before {
+    color: #2ecc71;
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Estilização do texto */
+.diferencial-item p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.diferencial-item:hover p {
+    color: #34495e;
+}
+
+/* Animação de entrada */
+@keyframes diferencialFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.diferencial-item {
+    animation: diferencialFadeIn 0.5s ease forwards;
+    animation-delay: calc(var(--item-index) * 0.1s);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .diferencial-item {
+        margin: 0 auto;
+    }
+}
+/* Seção Hero com Imagem de Fundo e Efeito Parallax */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/images\ \(1\).jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+
+/* Seção do Portfólio */
+.portfolio-section {
+    padding: 40px 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.portfolio-overlay p {
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+
+.portfolio-link {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-link:hover {
+    background-color: #ff4500;
+}
+
+/* Estilos para o container do header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilos para o container do logo */
+.logo {
+    max-width: 250px;
+    padding: 10px 0;
+}
+
+/* Estilos para a imagem do logo */
+.main-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .main-logo {
+    transform: scale(1.05);
+}
+
+/* Versão responsiva */
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 20px;
+    }
+    
+    .logo {
+        max-width: 180px;
+    }
+}
+
+/* Remover o título texto "DJGPinturas" já que temos o logo */
+.logo h1 {
+    display: none;
+}
